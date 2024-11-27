@@ -68,9 +68,20 @@ if submit:
     except ValueError:
         st.error("⚠️ Harap masukkan nilai numerik yang valid (gunakan titik/koma untuk desimal).")
 
-# Footer
 st.markdown("""
 ---
-💡 **Catatan**: Model prediksi ini tidak menggantikan diagnosis medis profesional. 
-Silakan konsultasikan hasil ini dengan dokter untuk kepastian lebih lanjut.
+💡 **Catatan**: 
+- Model prediksi ini HANYA UNTUK diagnosa awal. Silakan konsultasikan hasil ini dengan dokter untuk kepastian lebih lanjut.  
+- Berikut adalah panduan untuk mendapatkan data yang perlu diinput:  
+    - **Jumlah Kehamilan (Pregnancies):** Masukkan jumlah total kehamilan yang pernah dialami pasien.  
+    - **Kadar Glukosa (Glucose):** Diukur menggunakan tes glukosa darah puasa (mg/dL).  
+    - **Tekanan Darah (BloodPressure):** Diukur menggunakan alat tensimeter (mmHg).  
+    - **Ketebalan Kulit (SkinThickness):** Diukur menggunakan alat skinfold caliper (mm).  
+    - **Kadar Insulin (Insulin):** Hasil dari tes darah setelah berpuasa (μU/mL).  
+    - **BMI:** Rasio berat badan terhadap tinggi badan, dihitung dengan rumus:  
+       BMI = Berat Badan (kg)/Tinggi Badan (m)²
+    - **Fungsi Silsilah Diabetes (Diabetes Pedigree Function):** Dihitung berdasarkan riwayat keluarga dan faktor genetik.  
+    - **Usia (Age):** Masukkan usia pasien dalam tahun.  
+
+Silakan pastikan data yang dimasukkan akurat untuk mendapatkan hasil prediksi yang optimal.
 """)
